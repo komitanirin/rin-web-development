@@ -1,0 +1,334 @@
+
+.video-box {
+    position: relative;
+    height: 100vh;
+    background-color: #C1CFF7;
+    /*进行视频裁剪*/
+    overflow: hidden;
+}
+
+.video-box .mianvedio {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*保证视频内容始终居中*/
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 800px;
+}
+
+
+
+body{
+    font-family: 'Lato',sans-serif;
+    margin: 0;
+    padding: 0;
+
+   
+}
+
+nav {
+    z-index: 99;
+    position: relative;
+    transition: 0.1s;
+}
+nav a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+nav .container{
+    max-width: 1150px;
+    padding: 1em 2em;
+    margin: 0 auto;
+}
+nav .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+nav ul li{
+    display: inline-block;
+    margin:  0.9em; /*此处设置图片间距*/
+}
+nav ul a{
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em; /*设置图标大小*/
+    text-transform: uppercase;
+    color: white;
+    width: 64px;
+    height: 64px;
+
+}
+
+/*下划线特效*/
+.links{
+    display: flex;
+    position: relative;
+}
+
+.links ul li a{
+
+    text-decoration: none;
+    
+    color: rgb(47, 41, 41);
+    text-transform: uppercase;
+    margin: 0 2px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;/*自定义鼠标*/
+    transition: 0.3s;
+}
+/*设置字体特效*/
+.links ul li a::before{
+    position: absolute;
+    content: "";
+    bottom:-20px;
+    left:0px;
+    width:100%;
+    height:3px;
+    background-color:skyblue;
+    opacity:0;
+    transition:0.5s;
+}
+/*被指向时特效改变*/
+.links ul li a:hover::before{
+    opacity:1;
+    bottom:-8px;
+}
+.links li a:hover {
+    text-shadow:  0 0 6px #25ccf7;
+  }
+nav .container .menu-btn{
+    display: none;
+}
+.social-media a{
+    font-size: 1em;
+}
+
+
+header{
+    height: 0vh;
+    /* background-image:url('\background.jpg'); */
+    /* center no-repeat fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; */
+}
+header h1{
+    user-select: none; /*设置元素无法被选中*/
+    position: absolute;
+    font-size: clamp(3.5rem,15vw + 1rem,12rem);
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    transform: translateY(-50%);
+}
+.glass{
+    position: absolute;
+    width: 48%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow:  0px 8px 32px -10px skyblue;
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.h-glass{
+    background:
+    url('./img/main_bg_pc.jpg') no-repeat fixed;
+    background-size:cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 10%;
+    right: 10%;
+    animation: text1 0.8s ease-in forwards;
+}
+.h-regular{
+    user-select: none;
+    background: 
+    url('./img/main_bg_pc.jpg') no-repeat fixed;
+    background-size:cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-color: rgba(171, 247, 255,);
+    top: 30%;
+    left: 75%;
+    animation: text2 0.8s ease-in forwards;
+    animation-delay: 1000ms;
+    
+}
+.glass > div{
+    display: content;
+    justify-content:center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em;
+}
+.glass > div div {
+    margin: 0 1em;
+}
+#View{
+    font-size: 40px;
+    color: skyblue;
+    text-decoration: none; /*去除链接下划线*/
+}
+#Viewimg{
+    width: 35px;
+    height: auto;
+    top: 100%;
+}
+
+.glass p {
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 27px;
+    max-width: 27em;
+    right: 0%;
+}
+
+.glass h2{
+    color: #fff;
+}
+.glass a {
+    color: #fff;
+}
+.glass a img {
+    
+    margin-left: 0em;
+}
+.glass .fa-route{
+    color: #ccc;
+}
+
+header h1{
+    opacity: 0;
+}
+
+div .h2{
+    right: 10%;
+    user-select: none;
+} 
+
+.h2 p{
+    color: black;
+    
+    text-shadow: 0 0 10px skyblue,0 0 20px skyblue,0 0 30px skyblue,0 0 40px skyblue;
+}
+
+
+@keyframes text1{
+    0%{
+        opacity: 0;
+        transform: translate(-2em,-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,-50%);
+    }
+}
+
+@keyframes text2{
+    0%{
+        opacity: 0;
+        transform: translate(-2em,-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,-50%);
+    }
+}
+
+@media screen and (max-width:900px) {
+    nav .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    nav .menu{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: 0.7s;
+    }
+    .nav-links li {
+        display: block;
+        margin: 0,5em 0;
+    }
+    .social-media li:nth-child(1){
+        margin-left: 0;
+    }
+    .social-media{
+        order: 2;
+    }
+    .nav-links{
+        order: 1;
+        padding-top: 1em;
+    }
+
+    nav .container .menu-btn img{
+        display: inline-block;
+        font-size: 11em;
+        cursor: pointer;
+    }
+
+    nav .container .nav-toggle{
+        height: 15em;
+    }
+    .nav-backgruod{
+        background: #fff;
+    }
+
+}
+
+@media screen and (max-width:750px){
+    .glass{
+        width: 90%;
+        height: initial;
+        min-height: 30em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 15px;
+    }
+    .glass{
+        right: 52%;
+        top: 10%;
+        color: #1f1f1f;
+        background-attachment: initial;
+        background-size: 100% 130%;
+    }
+    .h-regular{
+        top: 30%;
+    }
+    nav .container .menu-btn{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .glass > div {
+        margin-top: 4em;
+    }
+}
