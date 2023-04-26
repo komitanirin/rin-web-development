@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    position: relative;
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(90deg, #65a2ec, #dfb2d1);
+    /* overflow: hidden; */
+}
+header{
+    position: relative;
+    width:100%;
+    padding:40px 0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index:2;
+}
+.logo h1{
+    user-select: none;
+    font-size: 35px;
+}
+
+.menu ul{
+    position: relative;
+   
+    display:flex;
+}
+/*此处开始定义header的特效 选中下划线特效*/
+.menu ul li{
+    list-style:none;
+}
+.menu ul li a{
+    text-decoration:none;
+    font-size:16px;
+    color:#262626;
+    text-transform:uppercase;
+    margin:0 30px;
+    font-weight:500;
+    position: relative;
+    cursor: pointer;
+    transition:0.3s;
+}
+.menu ul li a::before{
+    position: absolute;
+    content:"";
+    bottom:-20px;
+    left:0px;
+    width:100%;
+    height:3px;
+    background-color:skyblue;
+    opacity:0;
+    transition:0.5s;
+}
+.menu ul li a:hover::before{
+    opacity:1;
+    bottom:-8px;
+}
+.menu ul li a:hover{
+    color: rgb(98, 199, 239);
+}
+.cart :hover{
+    text-shadow:  0 0 6px #25ccf7;
+}
+.cart{
+    position: relative;
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+}
+.cart h2{
+    text-transform:uppercase;
+    font-size:16px;
+    font-weight:500;
+    color:#262626;
+    position: relative;
+    left:-12px;
+}
+.cart img{
+    width:10%;
+}
+.swiper-button{
+    position: absolute;
+    top:35%;
+    right:21vh;
+    display:flex;
+    flex-direction:column;
+    z-index:2;
+}
+.swiper-button i{
+    position: relative;
+    margin:10px 0;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:1px solid #9b9b9b;
+    text-align:center;
+    line-height:60px;
+    font-size:18px;
+    cursor: pointer;
+    transition:0.5s;
+}
+.swiper-button .fa-home:hover{
+    background-color:skyblue;
+    color:#fff;
+}
+.swiper-button .fa-music:hover{
+    background-color:aquamarine;
+    color:#fff;
+}
+.swiper-button .fa-download:hover{
+    background-color:pink;
+    color:#fff;
+}
+.container .sideTitle{
+    position: absolute;
+    top:30vh;
+    left:20vh;
+    font-size:14px;
+    text-transform:uppercase;
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    white-space:2px;
+    color:#262626;
+    z-index:2;
+}
+
+
+
+.swiper{
+    position: absolute;
+    top:0vh;
+    left:0vh;
+    width:100%;
+    height:100vh;
+}
+.swiper-slide{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(90deg, #D2DEED, #F4DBC7);
+}
+/* .slide02{
+    background-image:linear-gradient(90deg, #DBF0E5, #F6DFD3);
+}
+.slide03{
+    background-image:linear-gradient(90deg, #c7f5e3, #c8d1f6);
+}
+.slide04{
+    background-image:linear-gradient(90deg, #eac5f5, #e6fbe2);
+} */
+.slideContent{
+    position: relative;
+    display:flex;
+    top:25vh;
+    padding:0 120px;
+}
+/*设置内容盒子*/
+.slideInfo{
+    position: relative;
+    top:1vh;
+    left:18vh;
+}
+/*设置内容盒子中h2大小 颜色 粗 不可选中*/
+.slideInfo h2{
+    user-select: none;
+    font-size:25px;
+    color: #0c0c0c;
+    font-weight:70;
+}
+
+.slideInfo p span{
+    font-size:25px;
+    text-align:center;
+    margin:0 5px;
+    position: relative;
+    left:-5px;
+    top:-3px;
+}
+
+.slideInfo ul {
+    list-style: none;
+    display: flex;
+}
+
+
+.cart input{
+    overflow: unset;
+}
+.slideInfo h1{
+    font-size:2.5rem;
+    color:#000;
+    font-weight:700;
+    text-transform:capitalize;
+    padding-top:8px;
+}
+.slideInfo p{
+    font-size:14px;
+    font-weight:600;
+    color:#616161;
+    line-height:1.5;
+    padding-top:10px;
+}
+.slideInfo .btn{
+    position: relative;
+    top:35px;
+}
+.slideInfo .btn a{
+    padding:10px 30px;
+    border-radius:45px;
+    border:1px solid #262626;
+    text-decoration:none;
+    font-size:10px;
+    color:#262626;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:0.3s;
+}
+.slideInfo .btn a:hover{
+    background-color:#0c0c0c;
+    color:#fff;
+}
+.imgContent{
+    position: relative;
+    left:23vh;
+    top:-8vh;
+    width:350px;
+    height:500px;
+    /* background-image:linear-gradient(to top, #EF7E34, #F4C379); */
+    /* border-top-left-radius:25%;
+    border-top-right-radius:25%;
+    border-bottom-left-radius:45%;
+    border-bottom-right-radius:45%; */
+}
+/* .slide02 .imgContent{
+    background-image:linear-gradient(to top, #F3E28C, #F1C664);
+}
+.slide03 .imgContent{
+    background-image:linear-gradient(to top, #8EE5EA, #639AF0);
+}
+.slide04 .imgContent{
+    background-image:linear-gradient(to top, #9FDFEC, #E76FAB);
+} */
+.imgContent img{
+    width:100%;
+    position: relative;
+
+    animation:ImgAnimated 2s linear infinite;
+}
+@keyframes ImgAnimated{
+    0%{
+        transform:translateY(10px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(10px);
+    }
+}
+.slide02 .imgContent img{
+    width:100%;
+    /* top:15vh;
+    left:8vh; */
+}
+.slide03 .imgContent img{
+    width:70%;
+    /* top:15vh;
+    left:8vh; */
+}
+.slide04 .imgContent img{
+    width:70%;
+    /* top:15vh;
+    left:8vh; */
+}
+.arrows{
+    position: relative;
+    top:-10vh;
+    left:87vh;
+    display:flex;
+
+}
+.arrows .arrow{
+    position: relative;
+    display:flex;
+    align-items:center;
+    font-size:30px;
+    transform:rotate(90deg);
+    margin:auto 10px;
+}
+.arrows .arrow::after{
+    font-size:20px;
+}
