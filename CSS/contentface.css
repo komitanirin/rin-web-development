@@ -25,6 +25,13 @@ header{
     user-select: none;
     font-size: 35px;
 }
+.logo h1 a{
+    list-style: none;
+    color: skyblue;
+    text-decoration: none;
+    border-bottom: 1px solid skyblue;
+    border-top:1px solid skyblue ;
+}
 
 .menu ul{
     position: relative;
@@ -157,15 +164,16 @@ header{
 .slideContent{
     position: relative;
     display:flex;
-    top:25vh;
+    top:200px;
     padding:0 120px;
 }
 /*设置内容盒子*/
 .slideInfo{
     position: relative;
-    top:1vh;
-    left:18vh;
+    
+    left:180px;
 }
+
 /*设置内容盒子中h2大小 颜色 粗 不可选中*/
 .slideInfo h2{
     user-select: none;
@@ -174,7 +182,7 @@ header{
     font-weight:70;
 }
 
-.slideInfo p span{
+.slideInfo p,span{
     font-size:25px;
     text-align:center;
     margin:0 5px;
@@ -188,6 +196,21 @@ header{
     display: flex;
 }
 
+.view a{
+    
+    text-decoration: none;
+    color: black;
+}
+.view li{
+    margin: 3px;
+    font-size: 19px;
+}
+.view .last{
+    margin-right: 0;
+}
+.firstline{
+    margin-right: 0px;
+}
 
 .cart input{
     overflow: unset;
@@ -227,10 +250,12 @@ header{
 }
 .imgContent{
     position: relative;
-    left:23vh;
-    top:-8vh;
+    left: 50%;
+    left:250px;
+    top:-15px;
     width:350px;
     height:500px;
+    
     /* background-image:linear-gradient(to top, #EF7E34, #F4C379); */
     /* border-top-left-radius:25%;
     border-top-right-radius:25%;
@@ -246,12 +271,21 @@ header{
 .slide04 .imgContent{
     background-image:linear-gradient(to top, #9FDFEC, #E76FAB);
 } */
-.imgContent img{
+.contentimg img{
     width:100%;
-    position: relative;
+    
+    
 
     animation:ImgAnimated 2s linear infinite;
 }
+
+.imgContent2 {
+    position: relative;
+    left: 175px;
+    width: 350px;
+    height: 500px;
+}
+
 @keyframes ImgAnimated{
     0%{
         transform:translateY(10px);
@@ -296,3 +330,4 @@ header{
 .arrows .arrow::after{
     font-size:20px;
 }
+
